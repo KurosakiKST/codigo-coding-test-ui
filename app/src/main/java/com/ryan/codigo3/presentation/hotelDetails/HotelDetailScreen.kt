@@ -4,6 +4,7 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -114,39 +115,16 @@ fun HotelDetailScreen() {
                     .align(Alignment.TopEnd),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                Surface(
-                    shape = CircleShape,
-                    color = Color.White,
-                    modifier = Modifier
-                        .size(40.dp)
-                        .clickable { /* Handle currency click */ }
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.currency),
-                        contentDescription = "Currency",
-                        tint = Red,
-                        modifier = Modifier
-                            .padding(8.dp)
-                            .size(24.dp)
-                    )
-                }
-
-                Surface(
-                    shape = CircleShape,
-                    color = Color.White,
-                    modifier = Modifier
-                        .size(40.dp)
-                        .clickable { /* Handle chat click */ }
-                ) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.chatactive),
-                        contentDescription = "Chat",
-                        tint = Red,
-                        modifier = Modifier
-                            .padding(8.dp)
-                            .size(24.dp)
-                    )
-                }
+                Image(
+                    painter = painterResource(id = R.drawable.currency),
+                    contentDescription = "Currency",
+                    modifier = Modifier.size(40.dp)
+                )
+                Image(
+                    painter = painterResource(id = R.drawable.chatactive),
+                    contentDescription = "Chat",
+                    modifier = Modifier.size(40.dp)
+                )
             }
         }
 
